@@ -1,0 +1,98 @@
+% Ejemplo de documento LaTeX
+% Tipo de documento y tamaño de letra
+\documentclass[12pt]{article}
+
+% Preparando para documento en Español.
+% Para documento en Inglés no hay que hacer esto.
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+
+% EL titulo, autor y fecha del documento
+\title{Tutorial breve de los comandos de Bash}
+\author{Ana Gabriela Carretas Talamante}
+\date{05 de Febrero de 2015}
+
+% Aqui comienza el cuerpo del documento
+\begin{document}
+% Construye el título
+\maketitle
+
+\section{¿Qué es {\tt bash}?}
+
+Bash es un interpretador de comandos utilizado sobre el sistema operativo Linux.
+Su función es de mediar entre el usuario y el sistema.
+
+\section{Las líneas de Comando}
+
+Algo que hace especial a Linux es su interfaz gráfica, esto hace que el usuario se sienta un poco más familiarizado con otros sistemas operativos.Linux utiliza una terminal, está conformada por líneas de comando y en ella se teclean las operaciones que ha de realizar la computadora. Una terminal se abre con {\tt Ctrl+Alt+T} 
+
+\section{Comandos básicos}
+
+
+\subsection{Para navegar}
+\begin{tabular}{|p{3cm}|p{10cm}|p{2cm}|}
+\hline
+Comando & Descripción & Ejemplo \\
+\hline
+{\tt echo \$SHELL} & Muestra una variable del sistema que incluye a Shell. & echo \$SHELL \\ \hline
+{\tt pwd} & Muestra el directorio donde estamos trabajando. & pwd  \\ \hline
+{\tt ls} & Enlista los contenidos del directorio. & ls Documents \\ \hline
+{\tt cd} & Change Directories - ie. Moverse a otro directorio. & cd AAA\\ \hline
+\end{tabular} 
+
+\subsection{Acerca de los archivos y directorios}
+
+\begin{tabular}{|p{3cm}|p{10cm}|p{2cm}|}
+\hline
+Comando & Descripción & Ejemplo \\
+\hline
+{\tt ls -a.} & Enlista los contenidos de un directorio, incluyendo a los archivos ocultos. & ls -a \\ \hline
+{\tt file} & Muestra qué tipo de archivo es un archivo o un directorio. & file \\ \hline
+\end{tabular} 
+
+\subsection{Una para manuales}
+
+\begin{tabular}{|p{3cm}|p{10cm}|p{2cm}|}
+\hline
+Comando & Descripción & Ejemplo \\
+\hline
+{\tt man -comando-} & Muestra una lista de comandos, y dentro de ella encuentra el que se tecleó. & man ls \\ \hline
+{\tt man -k -término-} & Busca en todos los manuales de comandos lo que contenga cada símbolo escrito. & man -k ls \\ \hline
+\end{tabular} 
+
+\subsection{Manipulación de archivos}
+\begin{tabular}{|p{3cm}|p{10cm}|p{2cm}|}
+\hline
+Comando & Descripción & Ejemplo \\
+\hline
+{\tt mkdir} & Crear un directorio. & mkdir bbb \\ \hline
+{\tt rmdir} & Borrar un directorio. & rmdir bbb \\ \hline
+{\tt touch} & Crea un archivo en blanco. & touch white \\ \hline
+{\tt cp} & Copia un archivo o un directorio. & cp aaa white \\ \hline
+{\tt mv} & Mueve un archivo o directorio, (también se puede usar para cambiar el nombre). & mv aaa white \\ \hline
+{\tt rm} & Elimina un archivo. & rm y \\ \hline
+\end{tabular} 
+
+\subsection{Vi: el editor de textos en la terminal}
+\begin{tabular}{|p{3cm}|p{10cm}|p{2cm}|}
+\hline
+Comando & Descripción & Ejemplo \\
+\hline
+{\tt vi} & Edita un archivo. & vi y \\ \hline
+{\tt cat} & Muestra un archivo. & cat y \\ \hline
+{\tt less} & Compacta la vista para ver archivos largos. & less y \\ \hline
+\end{tabular} 
+
+\subsection{Permisos en general}
+\begin{tabular}{|p{3cm}|p{10cm}|p{2cm}|}
+\hline
+Comando & Descripción & Ejemplo \\
+\hline
+{\tt chmod} & Cambia los permisos de un archivo o directorio. & chmod -w y \\ \hline
+{\tt ls -ld} & Muestra los permisos de un directorio respectivo. & ls -ld y \\ \hline
+\end{tabular} 
+
+% Nunca debe faltar esta última linea.
+\end{document}
