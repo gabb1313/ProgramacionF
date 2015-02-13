@@ -1,5 +1,3 @@
-! Hello World in Fortran 90 and 95
-
 PROGRAM Adivinador
      WRITE(*,*)  "Hola! Trataré de adivinar un número. Piensa en un número entre 1 y 10."
 call sleep (5)
