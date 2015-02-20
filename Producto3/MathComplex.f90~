@@ -1,0 +1,9 @@
+! Mathcomplex . f90 : demo de algunas funciones matematicas en Fortran
+! −−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Program Mathcomplex 
+  Complex *8 :: x = -1.0 , y = 2.0 , z = 0 
+  x = sqrt (x) 
+  y = atan (y) 
+  z = log (z)
+  print * , x, y, z 
+End Program Mathcomplex
