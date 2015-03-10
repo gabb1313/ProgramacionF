@@ -1,0 +1,24 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+T3(x):=taylor(f(x), x, 0, 3);
+      T5(x):=taylor(f(x), x, 0, 5);
+      T7(x):=taylor(f(x), x, 0, 7);
+      T9(x):=taylor(f(x), x, 0, 9);
+      f(x):=exp(x)/cos(x);
+      fortran(T3(x));
+      fortran(T5(x));
+      fortran(T7(x));
+      fortran(T9(x));
+      text(T3(x));
+      text(T5(x));
+      text(T7(x));
+      text(T9(x));
+      plot2d ([T3(x),T5(x),T7(x),T9(x),f(x)], [x, -%pi, %pi], [y, -5, 5,
+      [grid2d,true],[axes,solid],[color,red,green,blue,cyan,orange], 
+      [legend,"T3","T5","T7","T9","exp(x)/cos(x)"],[xlabel,"x"],[ylabel, "y"]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

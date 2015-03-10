@@ -1,0 +1,26 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+f(x):=sin(x);
+      T1(x):=taylor(f(x), x, 0, 1);
+      T3(x):=taylor(f(x), x, 0, 3);
+      T5(x):=taylor(f(x), x, 0, 5);
+      T7(x):=taylor(f(x), x, 0, 7);
+      fortran(T1(x));
+      fortran(T3(x));
+      fortran(T5(x));
+      fortran(T7(x));
+      text(T1(x));
+      text(T3(x));
+      text(T5(x));
+      text(T7(x));
+      plot2d ([f(x),T1(x),T3(x),T5(x),T7(x)],[x, -3.5, 3.5], [y, -1.5, 1.5,
+      [grid2d,true],[color,red,green,blue,orange,gray],[legend,false],
+      [label,["y=sin(x)",3,0.2],["y=P1(x)",1.5,1.5],["y=P3(x)",2.3,-1],
+      ["y=P5(x)",3,0.85],["y=P7(x)",3,-0.65]],[axes, solid],[box,false],
+      [xlabel,"x"], [ylabel,"y"]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
