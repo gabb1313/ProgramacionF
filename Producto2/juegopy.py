@@ -9,3 +9,4 @@ time.sleep(5)
 print "Al número resultante súmale 4."
 time.sleep(10)
 print "Muy bien. El resultado es 13 :)"
+ 
